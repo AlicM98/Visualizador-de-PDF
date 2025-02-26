@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador de PDF</title>
+  <style>
+    /* Reset de estilos */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container do eBook */
+    .container {
+      width: 70vw; /* Aumentado para 70% da largura da tela */
+      height: 95vh; /* Aumentado para 95% da altura da tela */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Estilização do iframe */
+    .pdf-viewer {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .pdf-viewer iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Botão de download */
+    .download-btn {
+      margin-top: 15px;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 768px) {
+      .container {
+        width: 95vw; /* No celular, ocupa quase toda a largura */
+        height: 90vh; /* Ajuste para telas menores */
+      }
+
+      .download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="pdf-viewer">
+      <iframe 
+        loading="lazy"
+        src="https://www.canva.com/design/DAGffxbp8_U/Iz_Vpb-O1KoULbAchKnlPw/view?embed" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Botão para baixar o eBook -->
+    <a class="download-btn" href="Ebook .pdf" download>📥 Baixar E-Book</a>
+  </div>
+</body>
+</html>
+
+
+
+
+
